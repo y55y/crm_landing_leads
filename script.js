@@ -47,8 +47,9 @@ function validate(data) {
   const normalizedPhone = String(data.phone || "").replace(/\D/g, "");
   if (normalizedPhone.length < 7 || normalizedPhone.length > 15) return labels.validation.phone;
 
+  const email = String(data.email || "").trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(String(data.email || "").trim())) return labels.validation.email;
+  if (email && !emailRegex.test(email)) return labels.validation.email;
 
   return null;
 }
