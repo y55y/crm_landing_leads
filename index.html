@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="سجل اهتمامك في منصة Middar لإدارة المبيعات والمخزون والمالية والفروع وسير العمل في نظام واحد."
+    />
+    <title>سجل اهتمامك | Middar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Middar">
+          <img src="./assets/logo.png" alt="Middar" />
+        </a>
+        <a class="header-link" href="#lead-form">سجل الآن</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell">
+          <div class="hero-copy">
+            <span class="eyebrow">
+              <span></span>
+              برنامج Middar للشركات
+            </span>
+            <h1>
+              <span>إدارة فعّالة</span>
+              <strong>لكافة أعمال شركتك</strong>
+            </h1>
+            <p>
+              يوحّد مدار المبيعات والمخزون والمالية والفروع وسير العمل في نظام
+              واحد واضح وسريع للشركات المتنامية. سجل اهتمامك الآن وسيتواصل معك
+              فريقنا.
+            </p>
+          </div>
+
+          <div class="value-grid" aria-label="مميزات مختصرة">
+            <article>
+              <h2>أداء فوري</h2>
+              <p>تجربة سريعة وسلسة</p>
+            </article>
+            <article>
+              <h2>موثوقية عالية</h2>
+              <p>بياناتك بأمان دائمًا</p>
+            </article>
+            <article>
+              <h2>تجربة عصرية</h2>
+              <p>تصميم بسيط واحترافي</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section" id="lead-form">
+        <div class="shell">
+          <form class="lead-card" id="leadForm" novalidate>
+            <div class="form-heading">
+              <h2>سجل اهتمامك</h2>
+              <p>املأ بيانات الشركة والتواصل، وسيتم إرسال الطلب مباشرة لفريق Middar.</p>
+            </div>
+
+            <input
+              class="honeypot"
+              type="text"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+
+            <div class="step-title">
+              <span class="step-icon" aria-hidden="true">▤</span>
+              <div>
+                <small>الخطوة 1</small>
+                <h3>معلومات المنشأة</h3>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                <span>اسم الشركة <b>*</b></span>
+                <input name="companyName" type="text" placeholder="مثال: شركة مدار" required />
+              </label>
+              <label>
+                <span>النشاط <b>*</b></span>
+                <input
+                  name="activity"
+                  type="text"
+                  placeholder="مثال: مطعم، متجر، خدمات منزلية..."
+                  required
+                />
+              </label>
+              <label>
+                <span>العنوان</span>
+                <input name="address" type="text" placeholder="المدينة، الحي" />
+              </label>
+              <label>
+                <span>النظام الحالي</span>
+                <input name="currentSystem" type="text" placeholder="مثال: Excel، نظام مخصص..." />
+              </label>
+            </div>
+
+            <label class="full-field">
+              <span>ملاحظات</span>
+              <textarea name="notes" rows="5" placeholder="أخبرنا أكثر عن احتياجاتك"></textarea>
+            </label>
+
+            <hr />
+
+            <div class="step-title">
+              <span class="step-icon" aria-hidden="true">○</span>
+              <div>
+                <small>الخطوة 2</small>
+                <h3>معلومات التواصل</h3>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                <span>اسم الشخص المسؤول <b>*</b></span>
+                <input name="contactName" type="text" placeholder="الاسم الكامل" required />
+              </label>
+              <label>
+                <span>رقم الجوال <b>*</b></span>
+                <input name="phone" type="tel" inputmode="tel" placeholder="مثال: 0555555555" required />
+              </label>
+              <label>
+                <span>البريد الإلكتروني <b>*</b></span>
+                <input name="email" type="email" placeholder="name@company.com" required />
+              </label>
+              <label>
+                <span>المسمى الوظيفي</span>
+                <input name="jobTitle" type="text" placeholder="مثال: مدير العمليات" />
+              </label>
+            </div>
+
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+
+            <button class="submit-button" type="submit">سجل اهتمامك الآن</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <img src="./assets/logo.png" alt="Middar" />
+        <p>تعرف على المزيد عن منصة Middar وحلولها الكاملة لإدارة أعمال شركتك.</p>
+        <a href="https://middar.com" target="_blank" rel="noreferrer">زيارة الموقع الرئيسي</a>
+        <small>© 2026 Middar. جميع الحقوق محفوظة.</small>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
