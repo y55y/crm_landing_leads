@@ -109,6 +109,35 @@
                 <span>النظام الحالي</span>
                 <input name="currentSystem" type="text" placeholder="مثال: Excel، نظام مخصص..." />
               </label>
+              <div class="status-field full-field">
+                <span class="status-title">حالة الشركة <b>*</b></span>
+                <div class="status-options" role="radiogroup" aria-label="حالة الشركة">
+                  <label class="status-option" style="--c:#12c7c4">
+                    <input type="radio" name="statues" value="MHTM" required />
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-label">مهتم</span>
+                    <span class="status-check" aria-hidden="true">✓</span>
+                  </label>
+                  <label class="status-option" style="--c:#94a3b8">
+                    <input type="radio" name="statues" value="GYR_MHTM" />
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-label">غير مهتم</span>
+                    <span class="status-check" aria-hidden="true">✓</span>
+                  </label>
+                  <label class="status-option" style="--c:#f59e0b">
+                    <input type="radio" name="statues" value="AARD_SAAR" />
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-label">عرض سعر</span>
+                    <span class="status-check" aria-hidden="true">✓</span>
+                  </label>
+                  <label class="status-option" style="--c:#6366f1">
+                    <input type="radio" name="statues" value="DYMW" />
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-label">ديمو</span>
+                    <span class="status-check" aria-hidden="true">✓</span>
+                  </label>
+                </div>
+              </div>
             </div>
 
             <label class="full-field">

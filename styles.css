@@ -238,6 +238,113 @@ label {
   text-align: right;
 }
 
+.status-field .status-title {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.status-field .status-title b {
+  color: var(--danger);
+  font-weight: 800;
+}
+
+.status-field .status-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.status-field .status-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #d8e2ea;
+  border-radius: 13px;
+  background: #f7f9fc;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: right;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.status-field .status-option:hover {
+  border-color: rgba(18, 199, 196, 0.55);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.status-field .status-option input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.status-field .status-dot {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--c, #94a3b8);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c, #94a3b8) 18%, transparent);
+}
+
+.status-field .status-label {
+  flex: 1 1 auto;
+  line-height: 1.3;
+}
+
+.status-field .status-check {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: transparent;
+  color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.status-field .status-option:has(input:checked) {
+  border-color: var(--c, rgba(18, 199, 196, 0.85));
+  background: color-mix(in srgb, var(--c, #12c7c4) 8%, #ffffff);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--c, #12c7c4) 14%, transparent);
+}
+
+.status-field .status-option:has(input:checked) .status-check {
+  background: var(--c, #12c7c4);
+  color: #ffffff;
+}
+
+.status-field .status-option:has(input:focus-visible) {
+  outline: none;
+  border-color: rgba(18, 199, 196, 0.85);
+  box-shadow: 0 0 0 4px rgba(18, 199, 196, 0.18);
+}
+
 label span {
   display: block;
   margin-bottom: 9px;

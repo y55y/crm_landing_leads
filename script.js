@@ -14,6 +14,7 @@ const labels = {
   validation: {
     companyName: "اسم الشركة مطلوب.",
     activity: "النشاط مطلوب.",
+    statues: "حالة الشركة مطلوبة.",
     contactName: "اسم الشخص المسؤول مطلوب.",
     phone: "أدخل رقم جوال صحيح.",
     email: "أدخل بريدًا إلكترونيًا صحيحًا.",
@@ -42,6 +43,7 @@ function getUserUuid() {
 function validate(data) {
   if (!String(data.companyName || "").trim()) return labels.validation.companyName;
   if (!String(data.activity || "").trim()) return labels.validation.activity;
+  if (!String(data.statues || "").trim()) return labels.validation.statues;
   if (!String(data.contactName || "").trim()) return labels.validation.contactName;
 
   const normalizedPhone = String(data.phone || "").replace(/\D/g, "");
@@ -89,6 +91,7 @@ form.addEventListener("submit", async (event) => {
         },
         company: {
           name: data.companyName,
+          statues: data.statues,
           notes: data.notes,
           address: data.address,
           activity: data.activity,
